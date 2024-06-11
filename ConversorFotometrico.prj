@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
   <configuration build-checksum="35549506" file="C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico.prj" location="C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico" name="ConversorFotometrico" preferred-package-location="C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>ConversorFotometrico</param.appname>
+    <param.appname>Conversor_Fotometrico</param.appname>
     <param.icon>${PROJECT_ROOT}\ConversorFotometrico_resources\icon.ico</param.icon>
     <param.icons>
       <file>${PROJECT_ROOT}\ConversorFotometrico_resources\icon_48.png</file>
@@ -16,7 +16,7 @@
     <param.description />
     <param.screenshot>${PROJECT_ROOT}\Icone conversor fotometrico.png</param.screenshot>
     <param.guid />
-    <param.installpath.string>\GEDRE-CT-UFSM\ConversorFotometrico\</param.installpath.string>
+    <param.installpath.string>\GEDRE-CT-UFSM\Conversor_Fotometrico\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo>${PROJECT_ROOT}\Icone conversor fotometrico.png</param.logo>
     <param.install.notes />
@@ -82,11 +82,11 @@
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\logo_gedre.png</file>
+      <file>${MATLAB_ROOT}\bin\logo_gedre.png</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\ConversorFotometrico\for_testing" name="splash.png" optional="false">C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\ConversorFotometrico\for_testing" name="ConversorFotometrico.exe" optional="false">C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico\for_testing\ConversorFotometrico.exe</file>
+      <file location="${PROJECT_ROOT}\ConversorFotometrico\for_testing" name="Conversor_Fotometrico.exe" optional="false">C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico\for_testing\Conversor_Fotometrico.exe</file>
       <file location="${PROJECT_ROOT}\ConversorFotometrico\for_testing" name="readme.txt" optional="true">C:\Users\Guilherme Silveira\Documents\GitHub\APP_Conversor_Fotometrico\ConversorFotometrico\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
