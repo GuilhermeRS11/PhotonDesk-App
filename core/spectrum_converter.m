@@ -30,7 +30,7 @@ if strcmp(folderName, 'core')
 end
 
 % Define the filename and path manually
-filename = 'incandescent _lamp.txt';
+filename = 'teste_grow.csv';
 filepath = 'sample_spectra/';          
 
 fullfile_path = fullfile(filepath, filename);
