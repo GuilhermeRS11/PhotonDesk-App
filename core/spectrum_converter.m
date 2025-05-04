@@ -30,7 +30,7 @@ if strcmp(folderName, 'core')
 end
 
 % Define the filename and path manually
-filename = 'blue_450nm_cree_xml2.txt';
+filename = 'incandescent _lamp.txt';
 filepath = 'sample_spectra/';          
 
 fullfile_path = fullfile(filepath, filename);
@@ -217,14 +217,28 @@ PeakWL = WL_interp(idx);    % Wavelength of the peak
 [max_val, max_idx] = max(SPD_interp);
 half_max = max_val / 2;
 
-% Find left and right bounds where spectrum crosses half maximum
-left_idx = find(SPD_interp(1:max_idx) < half_max, 1, 'last');
-right_idx = max_idx - 1 + find(SPD_interp(max_idx:end) < half_max, 1, 'first');
+% Default values
+lambda_left = NaN;
+lambda_right = NaN;
+FWHM = NaN;
 
-% Linear interpolation for more accurate crossing points
-lambda_left = interp1(SPD_interp(left_idx:left_idx+1), WL_interp(left_idx:left_idx+1), half_max);
-lambda_right = interp1(SPD_interp(right_idx-1:right_idx), WL_interp(right_idx-1:right_idx), half_max);
-FWHM = lambda_right - lambda_left;  % FWHM in nanometers
+% Find left crossing (before the peak)
+left_idx = find(SPD_interp(1:max_idx) < half_max, 1, 'last');
+if ~isempty(left_idx) && left_idx < max_idx
+    lambda_left = interp1(SPD_interp(left_idx:left_idx+1), WL_interp(left_idx:left_idx+1), half_max);
+end
+
+% Find right crossing (after the peak)
+right_idx_offset = find(SPD_interp(max_idx:end) < half_max, 1, 'first');
+if ~isempty(right_idx_offset) && (max_idx + right_idx_offset - 1) <= length(WL_interp)
+    right_idx = max_idx + right_idx_offset - 1;
+    lambda_right = interp1(SPD_interp(right_idx-1:right_idx), WL_interp(right_idx-1:right_idx), half_max);
+end
+
+% Compute FWHM if both crossings exist
+if ~isnan(lambda_left) && ~isnan(lambda_right)
+    FWHM = lambda_right - lambda_left;
+end
 
 % Convert from XYZ to linear RGB using the sRGB transformation matrix
 M = [ 3.2406, -1.5372, -0.4986;
