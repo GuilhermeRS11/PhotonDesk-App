@@ -18,8 +18,6 @@ O repositório está organizado em três pastas principais:
 - Geração de gráfico do espectro normalizado.
 - Cálculo automático de:
   - **Fluxo luminoso (lm)**
-  - **Potência radiante (W)**
-  - **PPF / PF (μmol/s)**
   - **FWHM (largura espectral a meia altura)**
   - **CCT (temperatura de cor correlata)**
   - **Coordenadas cromáticas (x, y, u, u′, v, v′)**
@@ -37,8 +35,10 @@ A interface principal inclui:
 - Seleção de arquivos individuais ou pastas com múltiplos espectros.
 - Gráfico espectral com curvas de referência (olho humano, PAR).
 - Seção **Spectral and Color Metrics** com as principais métricas de cor e qualidade da luz.
-- Conversões em tempo real na seção **Light Conversion**.
+- Conversões de luz total erradia na seção **Light Conversion**.
 - Conversões baseadas em área na seção **Light Conversion per Area**.
+
+![GUI demonstrarion](docs/GUI_example.png)
 
 ---
 
@@ -60,15 +60,13 @@ O aplicativo identifica se os dados estão em mW ou W com base no cabeçalho. Ca
 
 ---
 
-## 📊 Exatidão
-
-Os cálculos do Photon Desk foram comparados com relatórios de medições feitos por esferas integradoras profissionais. Os resultados obtidos mostram **boa concordância**, garantindo confiança nas análises feitas a partir dos dados espectrais.
-
----
-
 ## 🎞 Demonstração
 
-Um GIF demonstrativo (em breve) mostrará a usabilidade do app: desde a escolha do espectro até o cálculo e visualização das métricas.
+O GIF abaixo apresenta um exemplo de uso do Photon Desk:  
+mostra a seleção de um arquivo espectral, a inserção de valores para conversão e o acionamento do botão de cálculo.  
+Com isso, o app realiza a conversão de unidades fotométricas e exibe as métricas espectrais e cromáticas na interface.
+
+![Demo](docs/demo.gif)
 
 ---
 
@@ -82,6 +80,19 @@ Para usar o aplicativo:
 
 ---
 
+## 📊 Exatidão
+
+Os gráficos a seguir comparam os resultados obtidos pelo Photon Desk (à esquerda) com os relatórios gerados por uma esfera integradora profissional **Inventfine CMS-5000** (à direita).  
+
+Essa comparação valida a precisão dos cálculos do aplicativo, evidenciando a **boa concordância** entre os valores extraídos via software e os obtidos por instrumentação de laboratório.
+
+![Results comparison 1](docs/results_comparison_1.png)
+
+
+![Results comparison 2](docs/results_comparison_2.png)
+
+---
+
 ## 🚧 Melhorias Futuras
 
 - Adicionar mais espectros à pasta `sample_spectra`, com anotações detalhadas.
@@ -92,4 +103,4 @@ Para usar o aplicativo:
 
 ## 📜 Licença
 
-Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais informações.
+Este projeto está sob a licença GPL-3.0. Consulte o arquivo `LICENSE` para mais informações.
