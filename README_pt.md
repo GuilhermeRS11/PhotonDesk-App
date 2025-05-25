@@ -1,5 +1,7 @@
 # Photon Desk
 
+![Photon Desk Cover](docs/logo_app_100.png)
+
 **Photon Desk** é um aplicativo de análise e conversão de luz baseado no espectro fornecido. Ele permite importar espectros de diferentes fontes de luz, visualizar as curvas espectrais e obter métricas fotométricas, radiométricas e colorimétricas de forma automática e precisa.
 
 ## 📂 Estrutura do Projeto
@@ -72,11 +74,22 @@ Com isso, o app realiza a conversão de unidades fotométricas e exibe as métri
 
 ## 🛠 Instalação
 
-Para usar o aplicativo:
+Para usar o Photon Desk, siga os passos abaixo:
 
-1. Instale o **MATLAB Runtime** (disponível gratuitamente no site da MathWorks).
-2. Baixe o instalador do aplicativo (disponível na seção de releases).
-3. Siga as instruções de instalação. O runtime será instalado automaticamente, se necessário.
+1. Acesse a seção de [Releases](https://github.com/GuilhermeRS11/PhotonDesk-App/releases) e baixe:
+   - `PhotonDeskApp.exe`: instalador do aplicativo.
+   - `sample_spectra.zip`: conjunto de espectros de exemplo (opcional).
+
+2. Execute o arquivo `PhotonDeskApp.exe` com dois cliques.
+
+3. O instalador fará todo o processo automaticamente, incluindo:
+   - Baixar e instalar o **MATLAB Runtime** (caso você ainda não o tenha).
+   - Instalar o aplicativo Photon Desk.
+
+4. (Opcional) Extraia o conteúdo do arquivo `sample_spectra.zip` para utilizar os espectros de exemplo fornecidos. Eles podem ser carregados diretamente no app via a opção "Open Folder".
+
+> ⚠️ O MATLAB Runtime é necessário para rodar o aplicativo, mas não requer uma licença do MATLAB.
+
 
 ---
 
@@ -86,8 +99,13 @@ Os gráficos a seguir comparam os resultados obtidos pelo Photon Desk (à esquer
 
 Essa comparação valida a precisão dos cálculos do aplicativo, evidenciando a **boa concordância** entre os valores extraídos via software e os obtidos por instrumentação de laboratório.
 
-![Results comparison 1](docs/results_comparison_1.png)
+Além disso, as conversões entre unidades fotométricas, radiométricas e fotossintéticas (como **PPF** e **PPFD**) foram implementadas com base nas definições e fórmulas do artigo:
 
+> [Photometry and Photosynthesis: From Photometry to PPFD (Revised)](https://www.researchgate.net/publication/284157299_Photometry_and_Photosynthesis_From_Photometry_to_PPFD_Revised)
+
+Esse artigo serviu de referência técnica para garantir que os cálculos de equivalência entre luz visível e luz fotossintética sigam fundamentos científicos atualizados.
+
+![Results comparison 1](docs/results_comparison_1.png)
 
 ![Results comparison 2](docs/results_comparison_2.png)
 
