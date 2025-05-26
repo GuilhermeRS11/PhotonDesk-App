@@ -120,6 +120,16 @@ This scientific source was used to ensure the reliability of transformations bet
 
 ---
 
+## 👤 Author
+
+Developed by **Guilherme Ribeiro Silveira**, Electrical Engineering Master's student at UFSM  
+Affiliated with the **GEDRE – Intelligent Lighting Research Group**
+
+📧 guilhermeribeiro201342@gmail.com  
+🔗 [LinkedIn](www.linkedin.com/in/guilhermeribeirosilveira) | [GitHub](https://github.com/GuilhermeRS11)
+
+---
+
 ## 📜 License
 
 This project is licensed under the **GPL-3.0**. See the `LICENSE` file for more details.
